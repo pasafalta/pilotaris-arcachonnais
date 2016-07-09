@@ -808,7 +808,7 @@ div.social-text-button li a:active {
     /*display: block;*/
 }
 .decouverte-modal .modal-content {
-    max-height: 600px;
+    max-height: 650px;
     overflow-y: auto;
     overflow-x: hidden;
     text-align: center;
