@@ -24,14 +24,6 @@
         <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
-
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
-
     </head>
 
     <body id="page-top" class="index">
@@ -55,33 +47,57 @@
         </div>
 
         <!-- Header -->
-        <header id="header-photo">
-            <!--div class="header-top">
+        <!--header id="header-photo">
 <div class="container">
-<div class="row">
-<div class="col-xs-12 col-sm-12 col-md-12">
-<ul class="list-inline hidden-md hidden-lg">
-<li><i class="fa fa-map-marker pr-5 pl-10"></i>14 avenue du PARC, ARCACHON</li>
-<li><i class="fa fa-phone pr-5 pl-10"></i> 05 56 83 17 87 </li>
-</ul>
-<ul class="list-inline hidden-sm hidden-xs">
-<li><i class="fa fa-map-marker pr-5 pl-10"></i>14 avenue du PARC, 33120 ARCACHON</li>
-<li><i class="fa fa-phone pr-5 pl-10"></i> 05 56 83 17 87 </li>
-<li><i class="fa fa-envelope-o pr-5 pl-10"></i> pilotaris.arcachon@orange.fr</li>
-</ul>
+<div class="intro-text">
+<div class="intro-lead-in">Venez découvrir la pelote basque à Arcachon !</div>
+<div class="intro-heading">
+<a href="#decouverte" class="page-scroll btn btn-xl">En savoir plus</a>
+<a href="#decouverteModal1" data-toggle="modal" class="page-scroll btn btn-xl">Au programme</a>
+</div>
+</div>
+</div>
+</header-->
+        <header id="carousel-header" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-header" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-header" data-slide-to="1"></li>
+                <!--li data-target="#carousel-header" data-slide-to="2"></li-->
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="img/P1060087-2.jpg" alt="Second slide">
+                    <div class="carousel-caption hidden-xs">
+                        <div class="intro-text">
+                            <div class="intro-lead-in">Prochaine partie vendredi 22 juillet 20h30 !</div>
+                            <div class="intro-heading">
+                                <a href="#decouverteModal1" data-toggle="modal" class="page-scroll btn btn-xl">Au programme</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img/compo_7.jpg" alt="First slide">
+                    <div class="carousel-caption hidden-xs">
+                        <div class="intro-text">
+                            <div class="intro-lead-in">Venez découvrir la pelote basque à Arcachon !</div>
+                            <div class="intro-heading">
+                                <a href="#decouverteModal2" data-toggle="modal" class="page-scroll btn btn-xl">Pass-Pelote jusqu'au 24 août 2016</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--div class="item">
+<img src="img/Affiche_tournee_plages_2016.jpg" alt="Third slide">
+<div class="carousel-caption hidden-xs" style="width: 80%;">
+<div class="intro-text">
+<div class="intro-lead-in intro-lead-right" style="text-align: left; color: #A52B17; text-shadow: none; font-size: 30px; line-height: 40px;">Le fronton mobile est installé<br>place Thiers à Arcachon<br>ce week-end !</div>
+<div class="intro-heading intro-heading-right">
+<a href="#frontonmobile" data-toggle="modal" class="page-scroll btn btn-xl">En savoir plus</a>
 </div>
 </div>
 </div>
 </div-->
-            <div class="container">
-                <div class="intro-text">
-                    <div class="intro-lead-in">Venez découvrir la pelote basque à Arcachon !</div>
-                    <div class="intro-heading">
-                        <a href="#decouverte" class="page-scroll btn btn-xl">En savoir plus</a>
-                        <a href="#decouverteModal1" data-toggle="modal" class="page-scroll btn btn-xl">Au programme</a>
-                        <!--img href="#decouverteModal1" class="img-responsive" src="img/news/2016/Affiche_aout_2016_06_05.jpg"-->
-                    </div>
-                </div>
             </div>
         </header>
 
@@ -211,7 +227,7 @@ Photo6
 
                 <div class="alert alert-success alert-dismissible" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <strong>#saison</strong> La saison a débuté vendredi dernier par une belle partie contre Villenave d'Ornon, rendez-vous pour la prochaine partie vendredi 15 juillet contre Royan ! <!--a type="button" class="btn btn-default" href="news.html">Actualités</a-->
+                    <strong>#saison2016</strong> Rendez-vous pour la prochaine partie vendredi 22 juillet 20h30 contre Mauléon ! <!--a type="button" class="btn btn-default" href="news.html">Actualités</a-->
                 </div>
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-sm-6 decouverte-item">
@@ -257,8 +273,7 @@ Photo6
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 decouverte-item">
-                        <a class="decouverte-link">
-                            <a href="#frontonmobile" class="decouverte-link" data-toggle="modal">
+                        <a href="#frontonmobile" class="decouverte-link" data-toggle="modal">
                             <div class="decouverte-hover">
                                 <div class="decouverte-hover-content">
                                     <i class="fa fa-eye fa-3x"></i>
@@ -268,7 +283,7 @@ Photo6
                         </a>
                         <div class="decouverte-caption">
                             <h4>Fronton mobile</h4>
-                            <p class="text-muted">09 & 10 juillet 2016<br>17 & 18 août 2016<br>Le fronton mobile s'installe pour 2 jours en juillet et 2 jours en août jetée Thiers.</p>
+                            <p class="text-muted">09 et 10 juillet 2016<br>17 et 18 août 2016<br>Le fronton mobile s'installe pour 2 jours en juillet et 2 jours en août jetée Thiers.</p>
                         </div>
                     </div>
                 </div>
@@ -1287,6 +1302,18 @@ Photo6
             $(function () {
                 $('[data-toggle="tooltip"]').tooltip()
             })
+        </script>
+
+        <!-- Google Analytics -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-80826493-1', 'auto');
+            ga('send', 'pageview');
+
         </script>
 
     </body>

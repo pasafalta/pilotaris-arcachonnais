@@ -162,7 +162,8 @@ fieldset[disabled] .btn-primary.active {
     color: #659857;
     background-color: #fff
 }
-.btn-xl {
+.btn-xl,
+.btn-lg {
     color: #fff;
     background-color: #659857;
     border-color: #659857;
@@ -173,18 +174,32 @@ fieldset[disabled] .btn-primary.active {
     font-size: 18px;
     padding: 20px 40px
 }
+.btn-lg {
+    font-weight: 600;
+    border-radius: 3px;
+    font-size: 14px;
+    padding: 15px 30px;
+}
 .btn-xl:hover,
 .btn-xl:focus,
 .btn-xl:active,
 .btn-xl.active,
-.open .dropdown-toggle.btn-xl {
+.open .dropdown-toggle.btn-xl,
+.btn-lg:hover,
+.btn-lg:focus,
+.btn-lg:active,
+.btn-lg.active,
+.open .dropdown-toggle.btn-lg {
     color: #fff;
     background-color: #659857;
     border-color: #659857
 }
 .btn-xl:active,
 .btn-xl.active,
-.open .dropdown-toggle.btn-xl {
+.open .dropdown-toggle.btn-xl,
+.btn-lg:active,
+.btn-lg.active,
+.open .dropdown-toggle.btn-lg {
     background-image: none
 }
 .btn-xl.disabled,
@@ -201,11 +216,27 @@ fieldset[disabled] .btn-xl:focus,
 fieldset[disabled] .btn-xl:active,
 .btn-xl.disabled.active,
 .btn-xl[disabled].active,
-fieldset[disabled] .btn-xl.active {
+fieldset[disabled] .btn-xl.active,
+.btn-lg.disabled,
+.btn-lg[disabled],
+fieldset[disabled] .btn-lg,
+.btn-lg.disabled:hover,
+.btn-lg[disabled]:hover,
+fieldset[disabled] .btn-lg:hover,
+.btn-lg.disabled:focus,
+.btn-lg[disabled]:focus,
+fieldset[disabled] .btn-lg:focus,
+.btn-lg.disabled:active,
+.btn-lg[disabled]:active,
+fieldset[disabled] .btn-lg:active,
+.btn-lg.disabled.active,
+.btn-lg[disabled].active,
+fieldset[disabled] .btn-lg.active {
     background-color: #659857;
     border-color: #659857
 }
-.btn-xl .badge {
+.btn-xl .badge,
+.btn-lg .badge {
     color: #659857;
     background-color: #fff
 }
@@ -238,11 +269,11 @@ fieldset[disabled] .btn-xl.active {
     border-color: #659857;
 }
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: #A52B17
+    background-color: #A52B17;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-    background-color: #659857
+    background-color: #659857;
 }
 .navbar-default .nav li a {
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -325,15 +356,17 @@ header {
     -o-background-size: cover;
 }
 header .intro-text {
-    padding-top: 80px;
-    padding-bottom: 30px
+    padding-top: 0px;
+    padding-bottom: 0px;
+    z-index: 11;
 }
 header .intro-text .intro-lead-in {
     font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: italic;
     font-size: 22px;
     line-height: 22px;
-    margin-bottom: 35px;
+    margin-bottom: 60px;
+    text-shadow: 1px 1px 9px #111;
 }
 header .intro-text .intro-heading {
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -341,26 +374,27 @@ header .intro-text .intro-heading {
     font-weight: 700;
     font-size: 50px;
     line-height: 50px;
-    margin-bottom: 25px
+    margin-bottom: 0px;
+    margin-top: 25px;
 }
 @media (min-width: 768px) {
-    header .intro-text {
-        padding-top: 300px;
-        padding-bottom: 150px
-    }
     header .intro-text .intro-lead-in {
-        font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-style: italic;
-        font-size: 40px;
-        line-height: 40px;
-        margin-bottom: 60px
+        font-size: 25px;
+        line-height: 25px;
     }
     header .intro-text .intro-heading {
-        font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-        text-transform: uppercase;
-        font-weight: 700;
+        font-size: 60px;
+        line-height: 60px;
+    }
+}
+@media (min-width: 1250px) {
+    header .intro-text .intro-lead-in {
+        font-size: 38px;
+        line-height: 38px;
+    }
+    header .intro-text .intro-heading {
         font-size: 75px;
-        line-height: 75px;
+        line-height: 100px;
     }
 }
 section {
@@ -1409,4 +1443,49 @@ body {
 
 .scrolloff {
     pointer-events: none;
+}
+
+
+/* CAROUSEL PHOTOS
+-------------------------------------------------- */
+
+/* Carousel classe de base */
+.carousel {
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+    z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+    height: 170px;
+    background-color: rgba(165, 43, 23, 0.5);
+}
+.carousel-inner > .item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: auto;
+}
+
+/* Points de défilement */
+.carousel-indicators li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #000;
+    background-color: rgba(0,0,0,0);
+    border: 1px solid #FFF;
+    border-radius: 10px;
+}
+.carousel-indicators .active {
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    background-color: #A52B17;
 }
