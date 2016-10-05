@@ -1489,3 +1489,29 @@ body {
     margin: 0;
     background-color: #A52B17;
 }
+
+.carousel-jumbo {
+    border-radius: 5px;
+    background-color: rgba(165, 43, 23, 0.7);
+    padding-top: 0px;
+}
+.carousel-jumbo > h1 {
+    font-size: 28px;
+    color: #eee;
+}
+.carousel-jumbo > h2 {
+    font-size: 22px;
+    color: #eee;
+}
+.carousel-jumbo > p {
+    color: #eee;
+    margin-left: 18px;
+    margin-right: 18px;
+    margin-bottom: 0px;
+    font-size: 18px;
+    font-weight: 400;
+}
+.carousel-jumbo .info {
+    font-size: 16px;
+    font-weight: 200;
+}
