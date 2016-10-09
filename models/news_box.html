@@ -1,0 +1,19 @@
+<li onclick="location.href='single-page.html';" ng-repeat="actu in news | limitTo:quantity" class="post" repeat-done="">
+    <img ng-src="{{ actu.img }}" width="280" height="auto">
+    <div class="post-info">
+        <div class="post-basic-info">
+            <h3><a href="#">{{ actu.Titre }}</a></h3>
+            <span><a href="#"><label> </label>Movies</a></span>
+            <p>{{ actu.Description }}</p>
+        </div>
+        <div class="post-info-rate-share">
+            <div class="rateit">
+                <span> </span>
+            </div>
+            <div class="post-share">
+                <span> </span>
+            </div>
+            <div class="clear"> </div>
+        </div>
+    </div>
+</li>

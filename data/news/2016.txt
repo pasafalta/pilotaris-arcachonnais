@@ -1,0 +1,61 @@
+[
+{
+"Titre" : "Evénement 1",
+"Description" : "Description de l'évènement 1",
+"img" : "img/news/2016/tournoi_arcachon_2.jpg"
+},
+
+{
+"Titre" : "Evénement 2",
+"Description" : "Description de l'évènement 2",
+"img" : "img/header-bg.jpg"
+},
+
+{
+"Titre" : "Evénement 3",
+"Description" : "Description de l'évènement 3",
+"img" : "img/news/2016/Pala_29_07_2016.jpg"
+},
+
+{
+"Titre" : "Evénement 4",
+"Description" : "Description de l'évènement 4",
+"img" : "img/news/2016/Gratien_15_juillet.jpg"
+},
+
+{
+"Titre" : "Evénement 5",
+"Description" : "Description de l'évènement 5",
+"img" : "img/news/2016/GC_championnat_LCA_1.jpeg"
+},
+
+{
+"Titre" : "Evénement 6",
+"Description" : "Description de l'évènement 6",
+"img" : "img/news/2016/2016_07_29_1.jpg"
+},
+
+{
+"Titre" : "Evénement 7",
+"Description" : "Description de l'évènement 7",
+"img" : "img/news/2016/visaville092016.jpg"
+},
+
+{
+"Titre" : "Evénement 8",
+"Description" : "Description de l'évènement 8",
+"img" : "img/news/2016/visavillestand.jpeg"
+},
+
+{
+"Titre" : "Evénement 9",
+"Description" : "Description de l'évènement 9",
+"img" : "img/news/2016/VisaVille.jpeg"
+},
+
+{
+"Titre" : "Evénement 10",
+"Description" : "Description de l'évènement 10",
+"img" : ""
+}
+]

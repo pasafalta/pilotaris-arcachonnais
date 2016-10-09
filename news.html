@@ -1,21 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
     <head>
-
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Pilotaris Arcachonnais - News</title>
-
         <!-- Bootstrap Core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Custom CSS -->
         <link href="css/agency.css" rel="stylesheet">
+        <link href="css/box_news.css" rel="stylesheet">
 
         <!-- Custom Fonts -->
         <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -24,6 +22,42 @@
         <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
+        <!-- AgularJS -->
+        <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+
+        <!-- jQuery -->
+        <script src="js/jquery.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+
+        <!-- Plugin JavaScript -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+        <script src="js/classie.js"></script>
+        <script src="js/cbpAnimatedHeader.js"></script>
+
+        <!-- Contact Form JavaScript -->
+        <script src="js/jqBootstrapValidation.js"></script>
+        <script src="js/contact_me.js"></script>
+
+        <!-- Custom Theme JavaScript -->
+        <script src="js/agency.js"></script>
+        <script src="js/box_news.js"></script>
+
+        <!-- Fixation menu top JavaScript -->
+        <script src="js/menu_top.min.js"></script>
+
+        <!-- Presentation -->
+        <script src="js/jquery.easytabs.min.js"></script>
+
+        <!-- Initialisation des tooltip bootstrap -->
+        <script>
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
+        </script>
+
+        <title>Pilotaris Arcachonnais - News</title>
     </head>
 
     <body id="page-top" class="index">
@@ -45,7 +79,6 @@
                 </li>
             </ul>
         </div>
-
         <!-- Header -->
         <header>
             <!-- Barre de menus -->
@@ -55,682 +88,106 @@
                         <a class="navbar-brand title">Pilotaris Arcachonnais <p class="under-title">Actualités sportives</p></a>
                     </div>
                     <!--div class="collapse navbar-collapse navbar-right">
-                        <ul class="nav navbar-nav historique">
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Historique <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">2015</a></li>
-                                    <li><a href="#">2014</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div-->
+<ul class="nav navbar-nav historique">
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Historique <span class="caret"></span></a>
+<ul class="dropdown-menu">
+<li><a href="#">2015</a></li>
+<li><a href="#">2014</a></li>
+</ul>
+</li>
+</ul>
+</div-->
                 </div>
             </nav>
         </header>
-
-        <!-- Corps de la page -->
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 text-center">
-                    <div class="row">
-                        <div class="col-lg-6 text-center">
-                            <div class="panel" id="panel-box-news">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title">Tournois</h3>
-                                </div>
-                                <div class="panel-body">
-                                    <div class="row">
-                                        <div class="date col-lg-12">
-                                            <p class="fa fa-calendar"> 26 nov. 16 - 12 fév. 17</p>
-                                        </div>
-                                        <div class="title col-lg-12">
-                                            <a href="img/news/2016/TournoiMaGPaletaNov2016.pdf" target="_blank">Tournoi d'Arcachon</a>
-                                            <p style='color: #333; margin-bottom: 2px;'>Mur à gauche<br>Paleta Gomme Pleine<br>1ère, 2ème et 3ème séries et féminines<br>Frais d'inscription : 30€ par équipe</p>
-                                        </div>
-                                        <div class="photo col-lg-12">
-                                            <hr>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="date col-lg-12">
-                                            <p class="fa fa-calendar"> 08-23 octobre</p>
-                                        </div>
-                                        <div class="title col-lg-12">
-                                            <p style='margin-bottom: 3px;'>Tournoi d'Arcachon</p>
-                                            <p style='color: #333; margin-bottom: 2px;'>Place libre<br>Paleta Gomme Pleine<br>1ère, 2ème et 3ème séries<br>Frais d'inscription : 15€ par équipe</p>
-                                        </div>
-                                        <div class="photo col-lg-12">
-                                            <hr>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="date col-lg-12">
-                                            <p class="fa fa-calendar"> 20 août - 29 octobre</p>
-                                        </div>
-                                        <div class="title col-lg-12">
-                                            <a href="img/news/2016/TournoiGraves.pdf" target="_blank">Tournoi des Graves</a>
-                                        </div>
-                                        <div class="photo col-lg-12">
-                                            <hr>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="date col-lg-12">
-                                            <p class="fa fa-calendar"> 3 juillet - 5 septembre</p>
-                                        </div>
-                                        <div class="title col-lg-12">
-                                            <a href="img/news/2016/TournoiBiscarrosse.pdf" target="_blank">Tournoi de Biscarrosse</a>
-                                        </div>
-                                        <div class="photo col-lg-12">
-                                            <img src="img/news/2016/Tournoi_Biscarosse.JPG" class="img-responsive" alt="">
-                                            <hr>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="date col-lg-12">
-                                            <p class="fa fa-calendar"> 21 mai - 22 mai</p>
-                                        </div>
-                                        <div class="title col-lg-12">
-                                            <a href="img/news/2016/Open_Gradignan.pdf" target="_blank">Open National des Graves</a>
-                                        </div>
-                                        <div class="photo col-lg-12">
-                                            <img src="img/news/2016/Open_Gradignan.jpg" class="img-responsive" alt="">
-                                            <hr>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="date col-lg-12">
-                                            <p class="fa fa-calendar"> 05 mai - 02 juillet</p>
-                                        </div>
-                                        <div class="title col-lg-12">
-                                            <a href="img/news/2016/lettretournoigujan2016.pdf" target="_blank">Tournoi de Gujan Paleta Gomme Pleine</a>
-                                            <hr>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="date col-lg-12">
-                                            <p class="fa fa-calendar"> 16 avril - 17 avril</p>
-                                        </div>
-                                        <div class="title col-lg-12">
-                                            <a href="img/news/2016/Affiche_frontennis.jpg" target="_blank">Tournoi National de Frontenis</a>
-                                        </div>
-                                        <div class="photo col-lg-12">
-                                            <img src="img/news/2016/Affiche_frontennis.jpg" class="img-responsive" alt="">
-                                            <hr>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="date col-lg-12">
-                                            <p class="fa fa-calendar"> 11 mars - 12 juin</p>
-                                        </div>
-                                        <div class="title col-lg-12">
-                                            <p>Tournoi du PIC</p>
-                                        </div>
-                                        <div class="photo col-lg-12">
-                                            <img src="img/news/2016/PIC.jpg" class="img-responsive" alt="">
-                                            <hr>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="date col-lg-12">
-                                            <p class="fa fa-calendar"> 02 janv - 26 mars</p>
-                                        </div>
-                                        <div class="title col-lg-12">
-                                            <a href="#tournoi-arca" class="decouverte-link" data-toggle="modal">Tournoi d'Arcachon</a>
-                                        </div>
-                                        <div class="photo col-lg-12">
-                                            <img src="img/news/2016/tournoi_arcachon_1.jpeg" class="img-responsive" alt="">
-                                            <hr>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 text-center">
-                            <div class="panel" id="panel-box-news">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title">Championnats</h3>
-                                </div>
-                                <div class="panel-body">
-                                    <div class="row">
-                                        <div class="date col-lg-12">
-                                            <p class="fa fa-calendar"> 25 sept. - 09 et 23 oct.</p>
-                                        </div>
-                                        <div class="title col-lg-12">
-                                            <p>Championnat Comité Côte d'Argent Paleta Gomme Pleine à Arcachon</p>
-                                            <p style='color: #333; margin-bottom: 2px;'>Parties de poules : le 25/09 et le 09/10<br>
-                                                1/2 finales : le 23/10</p>
-                                        </div>
-                                        <div class="photo col-lg-12">
-                                            <hr>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="date col-lg-12">
-                                            <p class="fa fa-calendar"> 7 - 14 août</p>
-                                        </div>
-                                        <div class="title col-lg-12">
-                                            <p>Grande semaine 2016</p>
-                                            <a href="img/news/2016/GrandeSemainePelote2016.jpg" target="_blank" style='color: #333;'>Programme des finales des championnats de France d'Eté.</a>
-                                        </div>
-                                        <div class="photo col-lg-12">
-                                            <hr>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="date col-lg-12">
-                                            <p class="fa fa-calendar"> 14 mai</p>
-                                        </div>
-                                        <div class="title col-lg-12">
-                                            <a href="#ChampPGPLCA" class="decouverte-link" data-toggle="modal">Ligue Côte d'Argent <br>Finales Paleta Gomme Pleine Place Libre</a>
-                                        </div>
-                                        <div class="photo col-lg-12">
-                                            <hr>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="date col-lg-12">
-                                            <p class="fa fa-calendar"> 30 avril - 1er mai</p>
-                                        </div>
-                                        <div class="title col-lg-12">
-                                            <a href="#ChampGCLCA" class="decouverte-link" data-toggle="modal">Ligue Côte d'Argent <br>Grand Chistera Senior</a>
-                                        </div>
-                                        <div class="photo col-lg-12">
-                                            <img src="img/news/2016/GC_championnat_LCA_4.jpeg" class="img-responsive" alt="">
-                                            <hr>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-7 text-center">
-                    <div class="panel" id="panel-box-news">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Faits marquants</h3>
-                        </div>
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-lg-5 media">
-                                </div>
-                                <div class="col-lg-7 caption">
-                                    <p class="post-tag">#TournoiArcachon</p>
-                                    <p class="post-title">Tournoi mur à gauche Paleta Gomme Pleine</p>
-                                    <p class="fa fa-clock-o post-date"> 26 novembre 2016 - 12 février 2017</p>
-                                    <p class="post-description">
-                                        1ère, 2ème, 3ème séries et féminines<br>Frais d'inscription : 30€ par équipe
-                                    </p>
-                                    <p class="post-description"><a target="_blank" href="img/news/2016/TournoiMaGPaletaNov2016.pdf">En savoir plus</a></p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <hr>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-5 media">
-                                </div>
-                                <div class="col-lg-7 caption">
-                                    <p class="post-tag">#ChampionnatPaleta</p>
-                                    <p class="post-title">Championnat Comité Côte d'Argent Paleta Gomme Pleine à Arcachon</p>
-                                    <p class="fa fa-clock-o post-date"> 25 sept. 2016 - 09 et 23 octobre 2016</p>
-                                    <p class="post-description">
-                                        Parties de poules : le 25/09 et le 09/10<br>
-                                        1/2 finales : le 23/10
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <hr>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-5 media">
-                                </div>
-                                <div class="col-lg-7 caption">
-                                    <p class="post-tag">#TournoiArcachon</p>
-                                    <p class="post-title">Tournoi place libre Paleta Gomme Pleine</p>
-                                    <p class="fa fa-clock-o post-date"> 08-23 octobre 2016</p>
-                                    <p class="post-description">
-                                        1ère, 2ème et 3ème séries<br>Frais d'inscription : 15€ par équipe
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <hr>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-5 media">
-                                    <img src="img/news/2016/Journees_patrimoine1.jpeg" class="img-responsive">
-                                    <br>
-                                    <img src="img/news/2016/Journees_patrimoine2.jpeg" class="img-responsive">
-                                </div>
-                                <div class="col-lg-7 caption">
-                                    <p class="post-tag">#JournéesPatrimoine</p>
-                                    <p class="post-title">Journées du patrimoine</p>
-                                    <p class="fa fa-clock-o post-date"> 17 et 18 septembre</p>
-                                    <p class="post-description">Nous avons pu compter sur une quarantaine de visiteurs pour notre première participation aux journées du patrimoine. <br>Nos visiteurs sont partis ravis après avoir visité nos installations, écouté des exposés sur l'historique du club et de la pelote, et pour certains s'être initiés à la pelote basque.</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <hr>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-5 media">
-                                </div>
-                                <div class="col-lg-7 caption">
-                                    <p class="post-tag">#ArcachonEnLigne</p>
-                                    <p class="post-title">Notre saison sur le site d'actualités d'Arcachon</p>
-                                    <p class="fa fa-clock-o post-date"> 03 septembre 2016</p>
-                                    <p class="post-description"><a target="_blank" href="http://www.arcachonenligne.fr/actualites/une-belle-saison-sportive-et-festive-pour-le-pilotaris-arcachonnais">Un résumé de notre saison sur ArcachonEnLigne !</a></p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <hr>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-5 media">
-                                    <img src="img/news/2016/visaville092016.jpg" class="img-responsive">
-                                    <br>
-                                    <img src="img/news/2016/visavillestand.jpeg" class="img-responsive">
-                                </div>
-                                <div class="col-lg-7 caption">
-                                    <p class="post-tag">#VisaVille</p>
-                                    <p class="post-title">Récompenses</p>
-                                    <p class="fa fa-clock-o post-date"> 03 septembre 2016</p>
-                                    <p class="post-description">A l'occasion du salon des associations "Visa ville" du 03 septembre, le Maire d'Arcachon, Yves Foulon, a récompensé 5 de nos joueurs : Legros Hugo, Schneider Aubin, Bonnafoux Théo (1/4 de finalistes du championnat de France à Cesta punta 2016) et Garcia Agathe et Morin Salomé (championnes 2016 de Côte d'Argent à paleta pelote de gomme pleine en mur à gauche).
-                                        <br>
-                                        Ci-joint, une photo de nos joueurs récompensés ainsi qu'une photo de notre stand.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <hr>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-5 media">
-                                    <img src="img/news/2016/Pala_29_07_2016.jpg" class="img-responsive">
-                                    <br>
-                                    <img src="img/news/2016/Equipes_08_07_2016.jpg" class="img-responsive">
-                                    <br>
-                                    <img src="img/news/2016/Christophe_08_07_2016.jpg" class="img-responsive">
-                                </div>
-                                <div class="col-lg-7 caption">
-                                    <p class="post-tag">#Saison2016</p>
-                                    <p class="post-title">Arcachon - Open Challenge Pau</p>
-                                    <p class="fa fa-clock-o post-date"> 29 juillet</p>
-                                    <p class="post-description">
-                                        Lever de rideau entre Gujan Mestras (Rossignol Steeve/Duchausky Mathieu) et Arcachon (Macek Robin/Hervé Jérôme) : Belle partie avec de beaux échanges.
-                                    </p>
-                                    <p class="post-description">
-                                        Partie de Grand chistera entre Pau (Pierrou Christophe/Diez Gaby/Portet Jérôme) et Arcachon (Vatskil Julien/Legros Hugo/Cléaz Christophe) : Partie jouée avec un très bon esprit et remportée par Pau sur le score de 40 à 19 mais avec de jolis et longs points âprement disputés. A signaler entre autres les prestations de Jérôme Portet de Pau (champion du monde espoirs Cesta Punta 2015) et de Hugo Legros d'Arcachon (1/4 de finaliste du championnat de France Cesta Punta 2016) qui ont été saluées par les applaudissements du public.
-                                    <p class="post-description">A suivre, la soirée basque vendredi 05 août à 20h00.</p>
-                                    <p class="post-description">Tout le programme est disponible dans la rubrique <a href="index.html#decouverte">découverte</a> du site.</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <hr>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-5 media">
-                                    <img src="img/news/2016/Gratien_15_juillet.jpg" class="img-responsive">
-                                    <br>
-                                    <img src="img/news/2016/Herve_15_juillet.jpg" class="img-responsive">
-                                </div>
-                                <div class="col-lg-7 caption">
-                                    <p class="post-tag">#Saison2016</p>
-                                    <p class="post-title">Arcachon - Open Challenge Mauléon</p>
-                                    <p class="fa fa-clock-o post-date"> 22 juillet</p>
-                                    <p class="post-description">Belle partie ce vendredi de notre équipe Arcachonnaise contre les joueurs de Mauléon (40 - 25).</p>
-                                    <p class="post-description">Tout le programme est disponible dans la rubrique <a href="index.html#decouverte">découverte</a> du site.</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <hr>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-5 media">
-                                    <img src="img/news/2016/Royan_15_juillet_jeunes.jpg" class="img-responsive">
-                                    <br>
-                                    <img src="img/news/2016/Royan_15_juillet.jpg" class="img-responsive">
-                                </div>
-                                <div class="col-lg-7 caption">
-                                    <p class="post-tag">#Saison2016</p>
-                                    <p class="post-title">Arcachon - Royan</p>
-                                    <p class="fa fa-clock-o post-date"> 15 juillet</p>
-                                    <p class="post-description">Première victoire de la saison pour notre équipe Arcachonnaise le vendredi 15 juillet face à Royan (50 - 21).</p>
-                                    <p class="post-description">En première partie, de belles démonstrations des jeunes arcachonnais et royannais.</p>
-                                    <p class="post-description">Tout le programme est disponible dans la rubrique <a href="index.html#decouverte">découverte</a> du site.</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <hr>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-5 media">
-                                    <img src="img/news/2016/Hugo_08_07_2016.jpg" class="img-responsive">
-                                    <br>
-                                    <img src="img/news/2016/Villenave_08_07_2016.jpg" class="img-responsive">
-                                </div>
-                                <div class="col-lg-7 caption">
-                                    <p class="post-tag">#Saison2016</p>
-                                    <p class="post-title">La saison est lancée !</p>
-                                    <p class="fa fa-clock-o post-date"> 8 juillet</p>
-                                    <p class="post-description">La première grande partie de la saison a eu lieu vendredi 8 juillet avec une rencontre Arcachon - Villenave d'Ornon (34 - 45).</p>
-                                    <p class="post-description">A suivre, la prochaine partie vendredi 15 juillet à 20h30 contre Royan.</p>
-                                    <p class="post-description">Tout le programme est disponible dans la rubrique <a href="index.html#decouverte">découverte</a> du site.</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <hr>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-5 media">
-                                    <img src="img/news/2016/RassemblementFemininLigueArca.jpg" class="img-responsive">
-                                </div>
-                                <div class="col-lg-7 caption">
-                                    <p class="post-tag">#PeloteFéminine</p>
-                                    <p class="post-title">Rassemblement féminin</p>
-                                    <p class="fa fa-clock-o post-date"> 5 juin</p>
-                                    <p class="post-description">Le pilotaris arcachonnais a accueilli le dimanche 5 juin le Rassemblement Féminin organisé par la Commission Féminine de la Ligue Côte d'Argent.</p>
-                                    <p class="post-description">A suivre, la journée des féminines organisée par le CAB le dimanche 26 juin 2016 (<a href="img/news/2016/InvitationJourneeFemCAB2016.pdf" target="_blank">+ d'infos</a>).</p>
-                                    <p class="post-description"><a href="#RassemblementFeminin" class="decouverte-link" data-toggle="modal">Plus de détails...</a></p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <hr>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-5 media">
-                                    <img src="img/news/2016/GC_championnat_LCA_3.jpeg" class="img-responsive">
-                                </div>
-                                <div class="col-lg-7 caption">
-                                    <p class="post-tag">#GrandChistera</p>
-                                    <p class="post-title">Championnat de Ligue Côte d'Argent</p>
-                                    <p class="fa fa-clock-o post-date"> 1er mai</p>
-                                    <p class="post-description">Bravo à notre équipe (Hugo Legros, Julien Vatskil et Christophe Cléaz) qui s'est qualifiée pour la phase finale du tournoi préliminaire, qualificatif pour les championnats de France, en se classant 3ème au championnat sénior Grand Chistera de la Ligue Côte d'Argent.</p>
-                                    <p class="post-description">Un grand merci à tous ceux qui nous ont aidé à préparer et à organiser ces deux journées de championnat au Pilotaris Arcachonnais.</p>
-                                    <p class="post-description">Rendez-vous à Bagnères de Luchon pour la phase finale du tournoi préliminaire ! </p>
-                                    <p class="post-description"><a href="#ChampGCLCA" class="decouverte-link" data-toggle="modal">Plus de détails...</a></p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <hr>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-5 media">
-                                    <img src="img/news/2016/AssembleeGenerale.JPG" class="img-responsive">
-                                    <br>
-                                    <img src="img/news/2016/AG_repas.JPG" class="img-responsive">
-                                </div>
-                                <div class="col-lg-7 caption">
-                                    <p class="post-tag">#VieDuClub</p>
-                                    <p class="post-title">Assemblée générale</p>
-                                    <p class="fa fa-clock-o post-date"> 3 avril 2016</p>
-                                    <p class="post-description">A noter : <br> -> La gestion rigoureuse fait apparaître des finances saines en augmentation.<br> -> Les bons rapports du club avec tous nos partenaires FFPB, Ligue de Côte d"Argent, Municipalité d'Arcachon,<br> -> La convivialité de l'association et sa grand mixité sociale,<br> -> les résultats encourageants de nos cadets à cesta punta qui ont atteint les 1/4 de finales du championnat de France,<br> -> le travail constant des bénévoles et l'implication des entraîneurs et des joueurs qui défendent les couleurs du club dans les compétitions.</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <hr>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-5 media">
-                                    <img src="img/news/2016/Questionnaire.jpg" class="img-responsive">
-                                </div>
-                                <div class="col-lg-7 caption">
-                                    <p class="post-tag">#EcoleDePelote</p>
-                                    <p class="post-title">Organisation d'un cours pour adultes</p>
-                                    <p class="fa fa-clock-o post-date"> 28 Mars 2016</p>
-                                    <p class="post-description">Nous souhaitons mettre en place des cours de pelote pour adultes. Donnez-nous votre avis en répondant à ce petit <a target="_blank" href="http://goo.gl/forms/NVZIdggF8i">questionnaire</a> !</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <hr>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-5 media">
-                                    <img src="img/news/2016/tournoi_arcachon_1.jpeg" class="img-responsive">
-                                </div>
-                                <div class="col-lg-7 caption">
-                                    <p class="post-tag">#Pala</p>
-                                    <p class="post-title">Tournoi d'Arcachon</p>
-                                    <p class="fa fa-clock-o post-date"> 26 Mars 2016</p>
-                                    <p class="post-description">La finale du tournoi d'Arcachon s'est déroulée ce samedi 26 mars.</p>
-                                    <p class="post-description">Bravo aux vainqueurs et à tous les participants !</p>
-                                    <p class="post-description"><a href="#tournoi-arca" class="decouverte-link" data-toggle="modal">Plus de détails...</a></p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <hr>
-                            </div>
-                        </div>
+        <div ng-app = "mainApp" ng-controller = "newsController">
+            <div class="content">
+                <div class="wrap">
+                    <div id="main" role="main" style="height: 3208px;">
+                        <ul id="tiles">
+                            <div ng-include = "'models/news_box.html'"></div>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
+        <script>
+            var mainApp = angular.module("mainApp", []);
+            
+            mainApp.directive('repeatDone', function() {
+                return function(scope, element, attrs) {
+                    if (scope.$last) setTimeout(function() {
+                        scope.$emit('onRepeatLast', element, attrs);
+                    }, 1);
+                };
+            });
+            
+            mainApp.factory("padService", function () {
+                //Store service status here
+                var status = "none-yet";
+
+                function setStatus(s) {
+                    status = s;
+                    return status;
+                };
+
+                function getStatus() {
+                    return status;
+                };
+
+                return {
+                    setStatus: setStatus,
+                    getStatus: getStatus
+                };
+            });
+
+            mainApp.directive("widget", function() {
+                function widgetController($scope, padService) {
+                    //subscribe with $watch
+                    $scope.$watch(padService.getStatus, function(newStatus) {
+                        //catch-up and react to changes
+                        case (newStatus) {  
+                        "authenticated":
+                        // Do stuff related to authenticated state
+                        console.log("authenticated status");
+                        "ready":
+                        // Do stuff related to pad ready state
+                        console.log("ready status");
+                        "error":
+                        // Do stuff related to error state
+                        console.log("error status");
+                        default:
+                        break;
+                        }
+                                  $scope.message = newStatus;
+                                  };
+                                  };
+                                  
+              return {
+              restrict: 'E',
+              controller: widgetController
+              }
+              });
+            
+            mainApp.controller('newsController', function($scope, $http) {
+                var url = "data/news/2016.txt";
+
+                $http.get(url).success( function(response) {
+                    $scope.news = response;
+                    $scope.quantity = 6;
+                });
+                
+                $scope.$on('onRepeatLast', function(scope, element, attrs){
+                    console.log("Organisation des posts onRepeatLast");
+                    organisation_posts();
+                });
+            });
+        </script>
 
         <a id="scroll-to-top">
             <i class="fa fa-caret-up"></i>
-        </a>        
-        
-        <!-- Détails des tournois -->
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 modal modal-details" id="tournoi-arca" tabindex="-1" z-index="9999" role="dialog" aria-hidden="true">
-                <div class="modal-content">
-                    <div class="fa fa-times fa-stack-2x close-modal" data-dismiss="modal">
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-10 col-lg-offset-1">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2>Tournoi d'Arcachon</h2>
-                                <p class="fa fa-calendar item-intro"> 02 janv - 26 mars</p>
-                                <div class="row">
-                                    <div class="col-lg-4">
-                                        <img class="img-responsive img-centered" src="img/news/2016/tournoi_arcachon_1.jpeg" alt="">
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <img class="img-responsive img-centered" src="img/news/2016/tournoi_arcachon_2.jpg" alt="">
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <img class="img-responsive img-centered" src="img/news/2016/tournoi_arcachon_3.jpg" alt="">
-                                    </div>
-                                </div>
-                                <p class="sous-titre">Description</p>
-                                <p>Le tournoi d'Arcachon se déroule sur les trois premiers mois de l'année au Pilotaris Arcachonnais.</p>
-                                <p>26 équipes engagées de 9 clubs différents, 56 parties de poule à jouer.</p>
-                                <p class="sous-titre">Programme</p>
-                                <p>Quarts de finale : 1er we de mars samedi et dimanche</p>
-                                <p>Demies-finales : le we suivant</p>
-                                <p>Finales : 26 mars</p>
-                                <p class="sous-titre">Résultats</p>
-                                <p>3ème série : Vainqueurs ELISSALDE - GONZALES (Villenave) 35 / 21 DUPUIS - MASSIERE (Biscarosse)</p>
-                                <p>2ème série : Vainqueurs MOSCA - BOUDASSOU (Bordeaux-Lac) 35 / 25 PEIGNON - PERNICENI (Gujan)</p>
-                                <p>1ère série : Vainqueurs FABRE - RIGAUDIE (Bordeaux-Lac/Bègles) 35 / 26 ROCCO - DENDARY (Le Haillan)</p>
-                                <br>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal" style="text-align: center;"><i class="fa fa-times"></i> Fermer</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Détails des championnats -->
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 modal modal-details" id="ChampPGPLCA" tabindex="-1" z-index="9999" role="dialog" aria-hidden="true">
-                <div class="modal-content">
-                    <div class="fa fa-times fa-stack-2x close-modal" data-dismiss="modal">
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-10 col-lg-offset-1">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2>Championnat de Ligue Côte d'Argent</h2><h2>Finales Paleta Gomme Pleine</h2>
-                                <p class="fa fa-calendar item-intro"> 14 mai</p>
-                                <!--div class="row">
-                                    <div class="col-lg-3">
-                                        <img class="img-responsive img-centered" src="img/news/2016/GC_championnat_LCA_1.jpeg" alt="">
-                                    </div>
-                                </div-->
-                                <p class="sous-titre">Description</p>
-                                <p>Les finales du championnat de Ligue de paleta pelote gomme pleine place libre 2016 se dérouleront le samedi 14 mai à Cestas au fronton municipal.</p>
-                                <p>Le SAGC pelote basque vous propose une grillade le midi (participation 5€) , date limite de réservation 12 mai par mail secretariatsagcpelote@orange.fr.</p>
-                                <p class="sous-titre">Programme</p>
-                                <p>10h00 : 1ère série femmes</p>
-                                <p>PILOTARI GUJANAIS 1 (LALANNE Catherine / GUIET Corinne) contre U.S. BAZAS 1 (JOURDAN Maguy / DAL-CIN Laudine)</p>
-                                <br>
-                                <p>11h00 : 3ème série hommes</p>
-                                <p>PILOTARI GUJANAIS 05 (PEIGNON Frédéric - PERNICENI Jean luc) contre C.A. BEGLAIS 03 (DEROCLE Fabrice - CASSAGNE Adrien)</p>
-                                <br>
-                                <p>15h00 : 2ème série hommes</p>
-                                <p>C.A. BEGLAIS 01 (RIGAUDIE Kevin - GUITTON Cyril) contre S.A. GAZINET CESTAS 02 (MARTIN Nicolas - PARIS Steven)</p>
-                                <br>
-                                <p>16h00 : 1ère série hommes</p>
-                                <p>A.S. LIBOURNAISE 01 (NICOLAS Christophe - GIBAULT Kévin) OU PILOTARI CLUB GRADIGNANAIS 03 (BONNIN Olivier - HARGUINDEGUY Michel ) / S.A. GAZINET CESTAS 01 (GOUDIN Nicolas - MICHALUC Christophe)</p>
-                                <br>
-                                <p>17h00 : Remise des coupes et vin d'honneur</p>
-                                <p class="sous-titre">Résultats</p>
-                                <br>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal" style="text-align: center;"><i class="fa fa-times"></i> Fermer</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 modal modal-details" id="ChampGCLCA" tabindex="-1" z-index="9999" role="dialog" aria-hidden="true">
-                <div class="modal-content">
-                    <div class="fa fa-times fa-stack-2x close-modal" data-dismiss="modal">
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-10 col-lg-offset-1">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2>Championnat de Ligue Côte d'Argent</h2><h2>Grand Chistera Senior</h2>
-                                <p class="fa fa-calendar item-intro"> 30 avril - 1er mai</p>
-                                <div class="row">
-                                    <div class="col-lg-3">
-                                        <img class="img-responsive img-centered" src="img/news/2016/GC_championnat_LCA_1.jpeg" alt="">
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <img class="img-responsive img-centered" src="img/news/2016/GC_championnat_LCA_2.jpeg" alt="">
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <img class="img-responsive img-centered" src="img/news/2016/GC_championnat_LCA_4.jpeg" alt="">
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <img class="img-responsive img-centered" src="img/news/2016/GC_championnat_LCA_3.jpeg" alt="">
-                                    </div>
-                                </div>
-                                <p class="sous-titre">Description</p>
-                                <p>Le Championnat de Ligue Côte d'Argent 2016 à Grand Chistera s'est déroulé les samedi 30 avril et dimanche 1er mai sur la cancha du Fronton Abbé Anabitarte d'Arcachon.</p>
-                                <p>Quatre équipes étaient engagées (2 du Pilotari Club Villenavais, 1 du Royan Océan Club et 1 du Pilotaris Arcachonnais). La première journée a été perturbée par une météo très incertaine. En effet, la première partie prévue à 10h30 n'a débuté qu'à 14h. L'apparition tardive du soleil a permis néanmoins de boucler le championnat dans le week-end. La compétition a été dominée par les deux équipes du Pilotaris Club Villenavais qui se sont qualifiées, à l'issue des parties de poules, pour la finale. L'équipe 1, sortie invaincue des parties qualificatives, pouvait envisager l'avenir avec sérénité, mais après de nombreuses égalisations et des points disputés, c'est finalement l'équipe 2 qui devient championne de Ligue sur le score de 30 à 23. A l'issue de la petite finale, le Pilotaris Arcachonnais qui avait choisi de double surclasser un joueur cadet se classe 3ème devant le Royan Océan Club qui a bien résisté aux assauts de ses adversaires puisque la partie s'est achevée sur le score de 30 à 23.</p>
-                                <p>Les équipes classées 1, 2 et 3 sont qualifiées pour la phase finale du tournoi préliminaire qui se déroulera à Bagnères-de-Luchon les samedi 04 et dimanche 05 juin 2016. L'équipe classée 4 est qualifiée pour la première phase du tournoi préliminaire qui aura lieu à Bagnères-de-Luchon le samedi 21 mai 2016.</p>
-                                <p>Un grand merci aux bénévoles du Pilotaris Arcachonnais qui ont organisé ce championnat et qui ont préparé deux repas conviviaux pour les joueurs et leurs accompagnateurs.</p>
-                                <div class="row">
-                                    <div class="lien_news col-lg-12">
-                                        <a href="img/news/2016/GC_championnat_LCA_CR.png" target="_blank">Télécharger le compte-rendu</a>
-                                    </div>
-                                </div>
-                                <p class="sous-titre">Programme</p>
-                                <p>Samedi 30 avril 2016</p>
-                                <p>10h30 : Equipe Pilotari Club Villenavais 1 contre Equipe Pilotari Club Villenavais 2</p>
-                                <p>11h30 : Equipe Pilotaris Arcachonnais contre Equipe Royan Océan Club</p>
-                                <p>15h00 : Equipe Pilotari Club Villenavais 1 contre Equipe Royan Océan Club</p>
-                                <p>16h00 : Equipe Pilotari Club Villenavais 2 contre Equipe Pilotaris Arcachonnais</p>
-                                <br>
-                                <p>Dimanche 1er mai 2016</p>
-                                <p>10h30 : Equipe Pilotari Club Villenavais 1 contre Pilotaris Arcachonnais</p>
-                                <p>11h30 : Equipe Pilotari Club Villenavais 2 contre Equipe Royan Océan Club</p>
-                                <br>
-                                <p>15h00 : Partie de classement 3/4</p>
-                                <p>16h00 : Finale</p>
-                                <p class="sous-titre">Résultats</p>
-                                <p>Champions de Ligue Côte d'Argent : Equipe Pilotari Club Villenavais 2 (Nicol Thomas - Dubasque Clément - Nicol Guillaume)</p>
-                                <p>Vices-champions de Ligue Côte d'Argent : Equipe Pilotari Club Villenavais 1 (Guignard Mathieu - Hernandez Lilian - Medina Julien)</p>
-                                <p>3èmes : Equipe Pilotaris Arcachonnais (Vatskil Julien - Legros Hugo - Cléaz Christophe)</p>
-                                <p>4èmes : Equipe Royan Océan Club (Piochaud Fabien - Ledannois Thomas - Rabilloud Arthur)</p>
-                                <br>
-                                <div class="row">
-                                    <div class="col-lg-10 col-lg-offset-1">
-                                        <img class="img-responsive img-centered" src="img/news/2016/GC_championnat_LCA.png" alt="" style="height: 500px; max-height: 500px;">
-                                    </div>
-                                </div>
-                                <br>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal" style="text-align: center;"><i class="fa fa-times"></i> Fermer</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Autres fenetres -->
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 modal modal-details" id="RassemblementFeminin" tabindex="-1" z-index="9999" role="dialog" aria-hidden="true">
-                <div class="modal-content">
-                    <div class="fa fa-times fa-stack-2x close-modal" data-dismiss="modal">
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-10 col-lg-offset-1">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2>Rassemblement féminin</h2>
-                                <p class="fa fa-calendar item-intro"> 5 juin</p>
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <img class="img-responsive img-centered" src="img/news/2016/RassemblementFemininLigueArca2.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-4 col-lg-offset-2">
-                                        <img class="img-responsive img-centered" src="img/news/2016/RassemblementFemininLigueArca.jpg" alt="">
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <img class="img-responsive img-centered" src="img/news/2016/RassemblementFemininLigueArca3.jpg" alt="">
-                                    </div>
-                                </div>
-                                <br>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal" style="text-align: center;"><i class="fa fa-times"></i> Fermer</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- jQuery -->
-        <script src="js/jquery.js"></script>
-
-        <!-- Bootstrap Core JavaScript -->
-        <script src="js/bootstrap.min.js"></script>
-
-        <!-- Plugin JavaScript -->
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-        <script src="js/classie.js"></script>
-        <script src="js/cbpAnimatedHeader.js"></script>
-
-        <!-- Contact Form JavaScript -->
-        <script src="js/jqBootstrapValidation.js"></script>
-        <script src="js/contact_me.js"></script>
-
-        <!-- Custom Theme JavaScript -->
-        <script src="js/agency.js"></script>
-
-        <!-- Fixation menu top JavaScript -->
-        <script src="js/menu_top.min.js"></script>
-
-        <!-- Presentation -->
-        <script src="js/jquery.easytabs.min.js"></script>
-
-        <!-- Initialisation des tooltip bootstrap -->
-        <script>
-            $(function () {
-                $('[data-toggle="tooltip"]').tooltip()
-            })
-        </script>
+        </a>  
 
     </body>
 
