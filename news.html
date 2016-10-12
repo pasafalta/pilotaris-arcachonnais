@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="mainApp">
 
     <head>
         <meta charset="utf-8">
@@ -23,7 +23,11 @@
         <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
         <!-- AgularJS -->
-        <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js'></script>
+        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-animate.min.js'></script>
+        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-route.min.js'></script>
+        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-aria.min.js'></script>
+        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-messages.min.js'></script>
 
         <!-- jQuery -->
         <script src="js/jquery.js"></script>
@@ -35,6 +39,7 @@
         <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
         <script src="js/classie.js"></script>
         <script src="js/cbpAnimatedHeader.js"></script>
+        <script src="js/angulargrid.js"></script>
 
         <!-- Contact Form JavaScript -->
         <script src="js/jqBootstrapValidation.js"></script>
@@ -57,10 +62,11 @@
             })
         </script>
 
+
         <title>Pilotaris Arcachonnais - News</title>
     </head>
 
-    <body id="page-top" class="index">
+    <body id="page-top" class="layout-onepage" data-ng-controller="newsController">
         <div class="social-test">
             <ul class="list-inline social-buttons site">
                 <li><a href="index.html#sport"><i class="fa fa-arrow-left"></i></a>
@@ -87,103 +93,45 @@
                     <div class="navbar-header">
                         <a class="navbar-brand title">Pilotaris Arcachonnais <p class="under-title">Actualités sportives</p></a>
                     </div>
-                    <!--div class="collapse navbar-collapse navbar-right">
-<ul class="nav navbar-nav historique">
-<li class="dropdown">
-<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Historique <span class="caret"></span></a>
-<ul class="dropdown-menu">
-<li><a href="#">2015</a></li>
-<li><a href="#">2014</a></li>
-</ul>
-</li>
-</ul>
-</div-->
                 </div>
             </nav>
         </header>
-        <div ng-app = "mainApp" ng-controller = "newsController">
-            <div class="content">
-                <div class="wrap">
-                    <div id="main" role="main" style="height: 3208px;">
-                        <ul id="tiles">
-                            <div ng-include = "'models/news_box.html'"></div>
-                        </ul>
-                    </div>
+        <div id="newsController">
+            <div id="searchFilterWrap">
+                <form id="searchForm" class="ng-pristine ng-valid">
+                    <input type="text" id="searchBox" placeholder="Search by title" data-ng-model="searchTxt" data-ng-model-options="{debounce : 600}" class="ng-pristine ng-untouched ng-valid">
+                    <i class="icon-search"></i>
+                </form>
+                <div id="sortByWrap">
+                    Sort By : <i class="icon-time" data-ng-click="sortByTime()"></i><i class="icon-like" data-ng-click="sortByLikes()"></i><i class="icon-watch" data-ng-click="sortByWatch()"></i>
                 </div>
             </div>
+            <div id="gridWrap">
+                <ul class="dynamic-grid angular-grid" angular-grid="news" ag-id="gallery" grid-width="gridWidth" ag-options="angularGridOptions" ag-scroll-container="'#gallery-wrap'" ag-infinite-scroll="loadMore()">  
+                    <li onclick="location.href='single-page.html';" data-ng-repeat="actu in news" class="grid angular-grid-item img-loaded">
+                        <img ng-src="{{ actu.img }}" class="grid-img img-loaded" data-actual-width = "{{actu.actualWidth}}"  data-actual-height="{{actu.actualHeight}}">
+                        <div class="post-info">
+                            <div class="post-basic-info">
+                                <h3><a href="#">{{ actu.Titre }}</a></h3>
+                                <span><a href="#"><label> </label>Movies</a></span>
+                                <p>{{ actu.Description }}</p>
+                            </div>
+                            <div class="post-info-rate-share">
+                                <div class="rateit">
+                                    <span> </span>
+                                </div>
+                                <div class="post-share">
+                                    <span> </span>
+                                </div>
+                                <div class="clear"> 
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <script>
-            var mainApp = angular.module("mainApp", []);
-            
-            mainApp.directive('repeatDone', function() {
-                return function(scope, element, attrs) {
-                    if (scope.$last) setTimeout(function() {
-                        scope.$emit('onRepeatLast', element, attrs);
-                    }, 1);
-                };
-            });
-            
-            mainApp.factory("padService", function () {
-                //Store service status here
-                var status = "none-yet";
 
-                function setStatus(s) {
-                    status = s;
-                    return status;
-                };
-
-                function getStatus() {
-                    return status;
-                };
-
-                return {
-                    setStatus: setStatus,
-                    getStatus: getStatus
-                };
-            });
-
-            mainApp.directive("widget", function() {
-                function widgetController($scope, padService) {
-                    //subscribe with $watch
-                    $scope.$watch(padService.getStatus, function(newStatus) {
-                        //catch-up and react to changes
-                        case (newStatus) {  
-                        "authenticated":
-                        // Do stuff related to authenticated state
-                        console.log("authenticated status");
-                        "ready":
-                        // Do stuff related to pad ready state
-                        console.log("ready status");
-                        "error":
-                        // Do stuff related to error state
-                        console.log("error status");
-                        default:
-                        break;
-                        }
-                                  $scope.message = newStatus;
-                                  };
-                                  };
-                                  
-              return {
-              restrict: 'E',
-              controller: widgetController
-              }
-              });
-            
-            mainApp.controller('newsController', function($scope, $http) {
-                var url = "data/news/2016.txt";
-
-                $http.get(url).success( function(response) {
-                    $scope.news = response;
-                    $scope.quantity = 6;
-                });
-                
-                $scope.$on('onRepeatLast', function(scope, element, attrs){
-                    console.log("Organisation des posts onRepeatLast");
-                    organisation_posts();
-                });
-            });
-        </script>
 
         <a id="scroll-to-top">
             <i class="fa fa-caret-up"></i>
