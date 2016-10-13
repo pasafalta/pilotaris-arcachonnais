@@ -88,7 +88,7 @@
         <!-- Header -->
         <header>
             <!-- Barre de menus -->
-            <nav class="navbar navbar-default navbar-static-top" id="navbar-news" style="padding:0px">
+            <nav class="navbar navbar-default navbar-static-top" id="navbar-news" style="padding:0px; background-color: transparent;">
                 <div class="container">
                     <div class="navbar-header">
                         <a class="navbar-brand title">Pilotaris Arcachonnais <p class="under-title">Actualités sportives</p></a>
@@ -96,25 +96,33 @@
                 </div>
             </nav>
         </header>
+        <div class="container">
         <div id="newsController">
             <div id="searchFilterWrap">
                 <form id="searchForm" class="ng-pristine ng-valid">
-                    <input type="text" id="searchBox" placeholder="Search by title" data-ng-model="searchTxt" data-ng-model-options="{debounce : 600}" class="ng-pristine ng-untouched ng-valid">
-                    <i class="icon-search"></i>
+                    <input type="text" id="searchBox" placeholder="Recherche par titre" data-ng-model="searchTxt" data-ng-model-options="{debounce : 600}" class="ng-pristine ng-untouched ng-valid">
+                    <i class="fa fa-search fa-fw"></i>
                 </form>
                 <div id="sortByWrap">
-                    Sort By : <i class="icon-time" data-ng-click="sortByTime()"></i><i class="icon-like" data-ng-click="sortByLikes()"></i><i class="icon-watch" data-ng-click="sortByWatch()"></i>
+                    Sort By : <i class="fa fa-clock-o" data-ng-click="sortByTime()"></i><i class="icon-like" data-ng-click="sortByLikes()"></i><i class="icon-watch" data-ng-click="sortByWatch()"></i>
                 </div>
             </div>
             <div id="gridWrap">
-                <ul class="dynamic-grid angular-grid" angular-grid="news" ag-id="gallery" grid-width="gridWidth" ag-options="angularGridOptions" ag-scroll-container="'#gallery-wrap'" ag-infinite-scroll="loadMore()">  
+                <ul class="dynamic-grid angular-grid" angular-grid="news" ag-id="gallery" grid-width="gridWidth" ag-options="angularGridOptions" ag-infinite-scroll="loadMore()">  
                     <li onclick="location.href='single-page.html';" data-ng-repeat="actu in news" class="grid angular-grid-item img-loaded">
+                        <div class="post-img">
                         <img ng-src="{{ actu.img }}" class="grid-img img-loaded" data-actual-width = "{{actu.actualWidth}}"  data-actual-height="{{actu.actualHeight}}">
+                        </div>
                         <div class="post-info">
                             <div class="post-basic-info">
-                                <h3><a href="#">{{ actu.Titre }}</a></h3>
-                                <span><a href="#"><label> </label>Movies</a></span>
-                                <p>{{ actu.Description }}</p>
+                                <p class="post-label">{{ actu.Tag }}</p>
+                                <h5><a href="#" class="post-titre">{{ actu.Titre }}</a></h5>
+                                <h6><a href="#" class="post-titre">{{ actu.SousTitre }}</a></h6>
+                                <div class="post-date">
+                                    <i class="fa fa-clock-o" style="font-size:11px;"></i>
+                                    <span class="post-date-date">{{ actu.Date }}</span>
+                                </div>
+                                <p class="post-description">{{ actu.Description }}</p>
                             </div>
                             <div class="post-info-rate-share">
                                 <div class="rateit">
@@ -129,6 +137,7 @@
                         </div>
                     </li>
                 </ul>
+            </div>
             </div>
         </div>
 

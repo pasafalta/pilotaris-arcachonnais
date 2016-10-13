@@ -12,7 +12,10 @@
 },
 
 {
-"Titre" : "Evénement 3",
+"Titre" : "Tournoi place libre",
+"SousTitre" : "Paleta Gomme Pleine",
+"Date" : "12 octobre 2016",
+"Tag" : "#TournoiPaletaGomme",
 "Description" : "Description de l'évènement 3",
 "img" : "img/news/2016/Pala_29_07_2016.jpg"
 },
