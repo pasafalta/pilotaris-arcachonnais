@@ -1106,43 +1106,9 @@ hr {
 .affix {
     position: fixed;
 }
-@font-face {
-    font-family: 'icomoon';
-    src: url('../fonts/icomoon.eot?g059u7');
-    src: url('../fonts/icomoon.eot?#iefixg059u7') format('embedded-opentype'), url('../fonts/icomoon.woff?g059u7') format('woff'), url('../fonts/icomoon.ttf?g059u7') format('truetype'), url('../fonts/icomoon.svg?g059u7#icomoon') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-[class^="icon-"],
-[class*=" icon-"] {
-    font-family: 'icomoon';
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-.icon-time:before {
-    content: "\e603";
-}
-.icon-search:before {
-    content: "\e601";
-}
-.icon-watch:before {
-    content: "\e602";
-}
-.icon-like:before {
-    content: "\e600";
-}
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
+
+
+
 /*** Angular grid style ***/
 body {
     font-family: Helvetica, Arial, 'lucida grande', tahoma, verdana, arial, sans-serif;
@@ -1243,13 +1209,13 @@ opacity: 1;
     overflow: hidden;
     padding-right: 300px;
     max-width: 800px;
-    margin: 0 auto;
-    margin-top: 50px;
+    margin: 0px;
+    margin-top: 0px;
 }
 #searchForm {
     position: relative;
-    width: 100%;
     float: left;
+    padding-left: 20px;
 }
 #searchForm .icon-search {
     position: absolute;
@@ -1258,22 +1224,36 @@ opacity: 1;
     font-size: 22px;
 }
 #searchBox {
-    width: 100%;
+    width: 80%;
     border: 1px solid #ccc;
     outline: none;
     padding-left: 15px;
-    padding-right: 40px;
-    border-radius: 10px;
-    font-size: 16px;
+    padding-right: 80px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    font-size: 14px;
     height: 40px;
 }
-#sortByWrap {
-    float: right;
-    margin-right: -250px;
+.search-icon {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-left: 0px;
+    outline: none;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    font-size: 14px;
+    margin-left: -5px;
 }
-#sortByWrap [class^="icon-"],
-#sortByWrap [class*=" icon-"] {
-    background: none repeat scroll 0 0 #f7faff;
+#sortByWrap {
+    margin-right: -350px;
+}
+#sortByWrap [class^="fa"] {
+    background: none repeat scroll 0 0 #659857;
+    color: #fff;
     border-radius: 5px;
     cursor: pointer;
     display: inline-block;
@@ -1283,6 +1263,10 @@ opacity: 1;
     margin-right: 10px;
     text-align: center;
     width: 40px;
+}
+#sortByWrap [class^="fa"]:hover,
+#sortByWrap [class*="active"] {
+    background: none repeat scroll 0 0 rgba(165, 43, 23, 1);
 }
 /** search and sort section css end ***/
 /*** description section css ***/
@@ -1315,9 +1299,21 @@ opacity: 1;
     padding: 10px;
 }
 
+.post-description {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    font-size: 12px;
+}
+
 .post-titre {
     color: #333;
     padding-bottom: 0px;
+    font-size: 13px;
+}
+
+.post-basic-info {
+    padding-bottom: 10px;
 }
 .post-label {
     display: block;
@@ -1333,7 +1329,7 @@ opacity: 1;
     font-size: 11px;
     padding-right: 0px;
     padding-top: 0px;
-    padding-bottom: 0px;
+    padding-bottom: 10px;
     margin-bottom: 0px;
 }
 .post-date-date {

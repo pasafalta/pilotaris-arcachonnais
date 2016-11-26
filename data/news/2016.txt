@@ -1,64 +1,136 @@
 [
 {
-"Titre" : "Evénement 1",
-"Description" : "Description de l'évènement 1",
-"img" : "img/news/2016/tournoi_arcachon_2.jpg"
+"Titre" : "Tournoi Mur à Gauche",
+"SousTitre" : "Paleta Gomme Pleine",
+"Tag" : "#TournoiArcachon",
+"Date" : "26 novembre 2016 - 12 février 2017",
+"Description" : ["1ère, 2ème, 3ème séries et féminines.", "Frais d'inscription : 30€ par équipe"],
+"img" : ""
 },
 
 {
-"Titre" : "Evénement 2",
-"Description" : "Description de l'évènement 2",
-"img" : "img/header-bg.jpg"
+"Titre" : "Championnat Côte d'Argent",
+"SousTitre" : "Paleta Gomme Pleine",
+"Tag" : "#ChampionnatPaleta",
+"Date" : "25 sept. 2016 - 09 et 23 octobre 2016",
+"Description" : ["Parties de poules : le 25/09 et le 09/10", "1/2 finales : le 23/10"],
+"img" : ""
 },
 
 {
 "Titre" : "Tournoi place libre",
 "SousTitre" : "Paleta Gomme Pleine",
-"Date" : "12 octobre 2016",
-"Tag" : "#TournoiPaletaGomme",
-"Description" : "Description de l'évènement 3",
-"img" : "img/news/2016/Pala_29_07_2016.jpg"
+"Date" : "08-23 octobre 2016",
+"Tag" : "#TournoiArcachon",
+"Description" : ["1ère, 2ème et 3ème séries", "Frais d'inscription : 15€ par équipe"],
+"img" : ""
 },
 
 {
-"Titre" : "Evénement 4",
-"Description" : "Description de l'évènement 4",
-"img" : "img/news/2016/Gratien_15_juillet.jpg"
+"Titre" : "Journées du patrimoine",
+"Date" : "17 et 18 septembre 2016",
+"Tag" : "#JournéesPatrimoine",
+"Description" : ["Nous avons pu compter sur une quarantaine de visiteurs pour notre première participation aux journées du patrimoine.", "Nos visiteurs sont partis ravis après avoir visité nos installations, écouté des exposés sur l'historique du club et de la pelote, et pour certains s'être initiés à la pelote basque."],
+"img" : "img/news/2016/Journees_patrimoine1.jpeg"
 },
 
 {
-"Titre" : "Evénement 5",
-"Description" : "Description de l'évènement 5",
-"img" : "img/news/2016/GC_championnat_LCA_1.jpeg"
+"Titre" : "Notre saison",
+"SousTitre" : "",
+"Date" : "03 septembre 2016",
+"Tag" : "#Presse",
+"Description" : ["Un résumé de notre saison sur le site d'actualités d'Arcachon : ArcachonEnLigne !"],
+"img" : ""
 },
 
 {
-"Titre" : "Evénement 6",
-"Description" : "Description de l'évènement 6",
-"img" : "img/news/2016/2016_07_29_1.jpg"
-},
-
-{
-"Titre" : "Evénement 7",
-"Description" : "Description de l'évènement 7",
+"Titre" : "Récompenses",
+"SousTitre" : "",
+"Date" : "03 septembre 2016",
+"Tag" : "#VisaVille",
+"Description" : ["A l'occasion du salon des associations 'Visa ville' du 03 septembre, le Maire d'Arcachon, Yves Foulon, a récompensé 5 de nos joueurs : Legros Hugo, Schneider Aubin, Bonnafoux Théo (1/4 de finalistes du championnat de France à Cesta punta 2016) et Garcia Agathe et Morin Salomé (championnes 2016 de Côte d'Argent à paleta pelote de gomme pleine en mur à gauche).", "Ci-joint, une photo de nos joueurs récompensés."],
 "img" : "img/news/2016/visaville092016.jpg"
 },
 
 {
-"Titre" : "Evénement 8",
-"Description" : "Description de l'évènement 8",
-"img" : "img/news/2016/visavillestand.jpeg"
+"Titre" : "Arcachon - Open Challenge Pau",
+"SousTitre" : "",
+"Date" : "29 juillet 2016",
+"Tag" : "#Saison2016",
+"Description" : ["Lever de rideau entre Gujan Mestras (Rossignol Steeve/Duchausky Mathieu) et Arcachon (Macek Robin/Hervé Jérôme) : Belle partie avec de beaux échanges.", "Partie de Grand chistera entre Pau (Pierrou Christophe/Diez Gaby/Portet Jérôme) et Arcachon (Vatskil Julien/Legros Hugo/Cléaz Christophe) : Partie jouée avec un très bon esprit et remportée par Pau sur le score de 40 à 19 mais avec de jolis et longs points âprement disputés. A signaler entre autres les prestations de Jérôme Portet de Pau (champion du monde espoirs Cesta Punta 2015) et de Hugo Legros d'Arcachon (1/4 de finaliste du championnat de France Cesta Punta 2016) qui ont été saluées par les applaudissements du public."],
+"img" : "img/news/2016/Christophe_08_07_2016.jpg"
 },
 
 {
-"Titre" : "Evénement 9",
-"Description" : "Description de l'évènement 9",
-"img" : "img/news/2016/VisaVille.jpeg"
+"Titre" : "Arcachon - Open Challenge Mauléon",
+"SousTitre" : "",
+"Date" : "22 juillet 2016",
+"Tag" : "#Saison2016",
+"SousTitre" : "",
+"Description" : ["Belle partie ce vendredi de notre équipe Arcachonnaise contre les joueurs de Mauléon (40 - 25)."],
+"img" : "img/news/2016/Gratien_15_juillet.jpg"
 },
 
 {
-"Titre" : "Evénement 10",
-"Description" : "Description de l'évènement 10",
-"img" : ""
+"Titre" : "Arcachon - Royan",
+"SousTitre" : "",
+"Date" : "15 juillet 2016",
+"Tag" : "#Saison2016",
+"Description" : ["Première victoire de la saison pour notre équipe Arcachonnaise le vendredi 15 juillet face à Royan (50 - 21).", "En première partie, de belles démonstrations des jeunes arcachonnais et royannais."],
+"img" : "img/news/2016/Royan_15_juillet_jeunes.jpg"
+},
+
+{
+"Titre" : "La saison est lancée !",
+"SousTitre" : "",
+"Date" : "8 juillet 2016",
+"Tag" : "#Saison2016",
+"Description" : ["La première grande partie de la saison a eu lieu vendredi 8 juillet avec une rencontre Arcachon - Villenave d'Ornon (34 - 45)."],
+"img" : "img/news/2016/Hugo_08_07_2016.jpg"
+},
+
+{
+"Titre" : "Rassemblement féminin",
+"SousTitre" : "",
+"Date" : "5 juin 2016",
+"Tag" : "#PeloteFéminine",
+"Description" : ["Le pilotaris arcachonnais a accueilli le dimanche 5 juin le Rassemblement Féminin organisé par la Commission Féminine de la Ligue Côte d'Argent.", "A suivre, la journée des féminines organisée par le CAB le dimanche 26 juin 2016."],
+"img" : "img/news/2016/RassemblementFemininLigueArca.jpg"
+},
+
+{
+"Titre" : "Championnat de Ligue Côte d'Argent",
+"SousTitre" : "",
+"Date" : "5 juin 2016",
+"Tag" : "#GrandChistera",
+"Description" : ["Bravo à notre équipe (Hugo Legros, Julien Vatskil et Christophe Cléaz) qui s'est qualifiée pour la phase finale du tournoi préliminaire, qualificatif pour les championnats de France, en se classant 3ème au championnat sénior Grand Chistera de la Ligue Côte d'Argent.", "Un grand merci à tous ceux qui nous ont aidé à préparer et à organiser ces deux journées de championnat au Pilotaris Arcachonnais.", "Rendez-vous à Bagnères de Luchon pour la phase finale du tournoi préliminaire !"],
+"img" : "img/news/2016/GC_championnat_LCA_3.jpeg"
+},
+
+{
+"Titre" : "Assemblée générale",
+"SousTitre" : "",
+"Date" : "3 avril 2016",
+"Tag" : "#GrandChistera",
+"Description" : ["A noter :", "-> La gestion rigoureuse fait apparaître des finances saines en augmentation,", "-> Les bons rapports du club avec tous nos partenaires FFPB, Ligue de Côte d'Argent, Municipalité d'Arcachon,", "-> La convivialité de l'association et sa grand mixité sociale,", "-> les résultats encourageants de nos cadets à cesta punta qui ont atteint les 1/4 de finales du championnat de France,", "-> le travail constant des bénévoles et l'implication des entraîneurs et des joueurs qui défendent les couleurs du club dans les compétitions."],
+"img" : "img/news/2016/AssembleeGenerale.JPG"
+},
+
+{
+"Titre" : "Organisation d'un cours pour adultes",
+"SousTitre" : "",
+"Date" : "28 mars 2016",
+"Tag" : "#EcoleDePelote",
+"Description" : ["Nous souhaitons mettre en place des cours de pelote pour adultes.", "Donnez-nous votre avis en répondant à ce petit questionnaire ('http://goo.gl/forms/NVZIdggF8i')!"],
+"img" : "img/news/2016/Questionnaire.jpg"
+},
+
+{
+"Titre" : "Tournoi d'Arcachon",
+"SousTitre" : "Paleta Gomme Pleine",
+"Date" : "26 mars 2016",
+"Tag" : "#GrandChistera",
+"Description" : ["La finale du tournoi d'Arcachon s'est déroulée ce samedi 26 mars.", "Bravo aux vainqueurs et à tous les participants !"],
+"img" : "img/news/2016/tournoi_arcachon_1.jpeg"
 }
 ]
