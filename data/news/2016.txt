@@ -5,7 +5,8 @@
 "Tag" : "#TournoiArcachon",
 "Date" : "26 novembre 2016 - 12 février 2017",
 "Description" : ["1ère, 2ème, 3ème séries et féminines.", "Frais d'inscription : 30€ par équipe"],
-"img" : ""
+"img" : "",
+"url" : [{"titre" : "Tout le programme...", "lien" : "img/news/2016/TournoiHiverArcachonDetails.pdf"}]
 },
 
 {
@@ -40,7 +41,8 @@
 "Date" : "03 septembre 2016",
 "Tag" : "#Presse",
 "Description" : ["Un résumé de notre saison sur le site d'actualités d'Arcachon : ArcachonEnLigne !"],
-"img" : ""
+"img" : "",
+"url" : [{"titre" : "Article sur ArcachonEnLigne", "lien" : "http://www.arcachonenligne.fr/actualites/une-belle-saison-sportive-et-festive-pour-le-pilotaris-arcachonnais"}]
 },
 
 {
@@ -122,7 +124,8 @@
 "Date" : "28 mars 2016",
 "Tag" : "#EcoleDePelote",
 "Description" : ["Nous souhaitons mettre en place des cours de pelote pour adultes.", "Donnez-nous votre avis en répondant à ce petit questionnaire ('http://goo.gl/forms/NVZIdggF8i')!"],
-"img" : "img/news/2016/Questionnaire.jpg"
+"img" : "img/news/2016/Questionnaire.jpg",
+"url" : [{"titre" : "Lien vers le questionnaire", "lien" : "http://goo.gl/forms/NVZIdggF8i"}]
 },
 
 {

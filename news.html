@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta property="og:url"           content="http://www.arcapelote.com/news.html" />
+        <meta property="og:type"          content="article" />
+        <meta property="og:title"         content="Pilotaris Arcachonnais" />
+        <meta property="og:description"   content="Pelote basque Arcachon" />
+        <meta property="og:image"         content="http://www.arcapelote.com/img/news/2016/2016_07_29_1.jpg" />
+
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="css/agency.css" rel="stylesheet">
+        <link href="css/news.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+        <!-- AgularJS -->
+        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js'></script>
+        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-animate.min.js'></script>
+        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-route.min.js'></script>
+        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-aria.min.js'></script>
+        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-messages.min.js'></script>
+
+
+
+        <title>Pilotaris Arcachonnais - News</title>
+    </head>
+
+    <body>
+        <!-- Initialisation pour les boutons de partage Facebook -->
+        <!--div id="fb-root"></div>
+        <script>
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.8";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script-->
+        
+        <div class="social-test">
+            <ul class="list-inline social-buttons site">
+                <li><a href="index.html#sport"><i class="fa fa-arrow-left"></i></a>
+                </li>
+            </ul>
+            <ul class="list-inline social-buttons facebook hidden-sm hidden-xs">
+                <li><a target="_blank" href="https://www.facebook.com/Pilotaris-Arcachonnais-231975900198313/"><i class="fa fa-facebook"></i></a>
+                </li>
+            </ul>
+            <ul class="list-inline social-buttons email hidden-sm hidden-xs">
+                <li><a href="mailto:pilotaris.arcachon@orange.fr"><i class="fa fa-envelope-o"></i></a>
+                </li>
+            </ul>
+            <ul class="list-inline social-buttons map hidden-sm hidden-xs">
+                <li><a target="_blank" href="https://www.google.fr/maps/place/Pilotaris+Arcachonnais/@44.6508942,-1.1917555,17z/data=!3m1!4b1!4m2!3m1!1s0xd549e49148fea5f:0x3accf01993b042c6"><i class="fa fa-location-arrow"></i></a>
+                </li>
+            </ul>
+        </div>
+        <!-- Header -->
+        <header>
+            <!-- Barre de menus -->
+            <nav class="navbar navbar-default navbar-static-top navbar-shrink" id="navbar-news" style="padding:0px; background-color: transparent;">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand title">Pilotaris Arcachonnais <p class="under-title">Actualités sportives</p></a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="container">
+            <div ng-app="newsApp">
+                <div ng-controller="newsController" resize>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-5">
+                            <form>
+                                <input type="text" class="searchBox" placeholder="Rechercher" data-ng-model="searchTxt">
+                                <span class="form-control-feedback" style="margin-right: 18px; margin-top: 3px; color: rgba(165, 43, 23, 1);"><i class="fa fa-search"></i></span>
+                            </form>
+                        </div>
+                        <div class="col-xs-hidden col-sm-5">
+                            <div id="sortByWrap">
+                                <i class="fa fa-th-large active" data-ng-click="displayAll()" id="allfilterbutton"></i>
+                                <i class="fa" data-ng-click="filterByPala()" id="palafilterbutton"><img src="img/news/pala_icon.png" height="20px" width="30px"></i>
+                                <i class="fa" data-ng-click="filterByChistera()" id="chisterafilterbutton"><img src="img/news/chistera_icon.png" height="20px" width="30px"></i>
+                            </div>
+                        </div>
+                        <div class="col-xs-hidden col-sm-2 col-lg-1 col-lg-offset-1">
+                            <span class="glyphicon glyphicon-time form-control-feedback" style="margin-right: 23px; color: rgba(165, 43, 23, 1); margin-top: 3px;"></span>
+                            <select id="yearSelect" class="form-control selectBox" data-ng-model="searchDate">
+                                <option></option>
+                                <option>2017</option>
+                                <option>2016</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-{{ colBootsrap }} col-md-{{ colBootsrap }} col-lg-{{ colBootsrap }}" style="padding-left:7px; padding-right:7px;" data-ng-repeat="newsCol in newsByColumn">
+                            <div class="post-box" data-ng-repeat="actu in newsCol">
+                                <div class="post-img" ng-show="actu.img">
+                                    <img ng-src="{{ actu.img }}" class="grid-img img-loaded" data-actual-width = "{{actu.actualWidth}}"  data-actual-height="{{actu.actualHeight}}">
+                                </div>
+                                <div class="post-img" ng-hide="actu.img" style="padding-bottom: 0px;">
+                                </div>
+                                <div class="post-info">
+                                    <div class="post-basic-info">
+                                        <p ng-show="actu.Tag" class="post-label">{{ actu.Tag }}</p>
+                                        <h5><a href="#" class="post-titre">{{ actu.Titre }}</a></h5>
+                                        <h6 ng-show="actu.SousTitre"><p class="post-titre">{{ actu.SousTitre }}</p></h6>
+                                        <div class="post-date" ng-show="actu.Date">
+                                            <i class="fa fa-clock-o" style="font-size:11px;"></i>
+                                            <span class="post-date-date">{{ actu.Date }}</span>
+                                        </div>
+                                        <p class="post-description" data-ng-repeat="texte in actu.Description" >{{ texte }}</p>
+                                        <p class="post-description" data-ng-repeat="url in actu.url" ><a href="{{ url.lien }}" target="_blank">{{ url.titre }}</a></p>
+                                    </div>
+                                    <div class="post-info-rate-share">
+                                        <div class="rateit">
+                                            <span> </span>
+                                        </div>
+                                        <!--div class="post-share">
+                                            <div class="fb-share-button" data-href="http://www.arcapelote.com/news.html" data-layout="button" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.arcapelote.com%2F&amp;src=sdkpreparse">Partager</a></div>
+                                        </div-->
+                                        <div class="clear"> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Plugin JavaScript -->
+
+        <script src="js/news/newsController.js"></script>
+        <script src="js/news/newsDirective.js"></script>
+        <script src="js/news/services.js"></script>
+        <script src="js/news/newsFunctions.js"></script>
+        <script src="js/news/main.js"></script>
+
+
+        <!-- jQuery -->
+        <script src="js/jquery.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+
+
+    </body>
+
+</html>
