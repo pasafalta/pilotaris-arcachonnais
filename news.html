@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
     <head>
-
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
-
-        <title>Pilotaris Arcachonnais - News</title>
+        <meta property="og:url"           content="http://www.arcapelote.com/news.html" />
+        <meta property="og:type"          content="article" />
+        <meta property="og:title"         content="Pilotaris Arcachonnais" />
+        <meta property="og:description"   content="Pelote basque Arcachon" />
+        <meta property="og:image"         content="http://www.arcapelote.com/img/news/2016/2016_07_29_1.jpg" />
 
         <!-- Bootstrap Core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Custom CSS -->
         <link href="css/agency.css" rel="stylesheet">
+        <link href="css/news.css" rel="stylesheet">
 
         <!-- Custom Fonts -->
         <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -24,9 +27,30 @@
         <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
+        <!-- AgularJS -->
+        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js'></script>
+        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-animate.min.js'></script>
+        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-route.min.js'></script>
+        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-aria.min.js'></script>
+        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-messages.min.js'></script>
+
+
+
+        <title>Pilotaris Arcachonnais - News</title>
     </head>
 
-    <body id="page-top" class="index">
+    <body>
+        <!-- Initialisation pour les boutons de partage Facebook -->
+        <!--div id="fb-root"></div>
+        <script>
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.8";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script-->
+        
         <div class="social-test">
             <ul class="list-inline social-buttons site">
                 <li><a href="index.html#sport"><i class="fa fa-arrow-left"></i></a>
@@ -45,35 +69,22 @@
                 </li>
             </ul>
         </div>
-
         <!-- Header -->
         <header>
             <!-- Barre de menus -->
-            <nav class="navbar navbar-default navbar-static-top" id="navbar-news" style="padding:0px">
+            <nav class="navbar navbar-default navbar-static-top navbar-shrink" id="navbar-news" style="padding:0px; background-color: transparent;">
                 <div class="container">
                     <div class="navbar-header">
                         <a class="navbar-brand title">Pilotaris Arcachonnais <p class="under-title">Actualités sportives</p></a>
                     </div>
-                    <!--div class="collapse navbar-collapse navbar-right">
-                        <ul class="nav navbar-nav historique">
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Historique <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">2015</a></li>
-                                    <li><a href="#">2014</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div-->
                 </div>
             </nav>
         </header>
-
-        <!-- Corps de la page -->
         <div class="container">
-            <div class="row">
-                <div class="col-lg-5 text-center">
+            <div ng-app="newsApp">
+                <div ng-controller="newsController" resize>
                     <div class="row">
+<<<<<<< HEAD
                         <div class="col-lg-6 text-center">
                             <div class="panel" id="panel-box-news">
                                 <div class="panel-heading">
@@ -503,52 +514,61 @@
                             <div class="row">
                                 <hr>
                             </div>
+=======
+                        <div class="col-xs-12 col-sm-5">
+                            <form>
+                                <input type="text" class="searchBox" placeholder="Rechercher" data-ng-model="searchTxt">
+                                <span class="form-control-feedback" style="margin-right: 18px; margin-top: 3px; color: rgba(165, 43, 23, 1);"><i class="fa fa-search"></i></span>
+                            </form>
+>>>>>>> testangularjs
+                        </div>
+                        <div class="col-xs-hidden col-sm-5">
+                            <div id="sortByWrap">
+                                <i class="fa fa-th-large active" data-ng-click="displayAll()" id="allfilterbutton"></i>
+                                <i class="fa" data-ng-click="filterByPala()" id="palafilterbutton"><img src="img/news/pala_icon.png" height="20px" width="30px"></i>
+                                <i class="fa" data-ng-click="filterByChistera()" id="chisterafilterbutton"><img src="img/news/chistera_icon.png" height="20px" width="30px"></i>
+                            </div>
+                        </div>
+                        <div class="col-xs-hidden col-sm-2 col-lg-1 col-lg-offset-1">
+                            <span class="glyphicon glyphicon-time form-control-feedback" style="margin-right: 23px; color: rgba(165, 43, 23, 1); margin-top: 3px;"></span>
+                            <select id="yearSelect" class="form-control selectBox" data-ng-model="searchDate">
+                                <option></option>
+                                <option>2017</option>
+                                <option>2016</option>
+                            </select>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <a id="scroll-to-top">
-            <i class="fa fa-caret-up"></i>
-        </a>        
-        
-        <!-- Détails des tournois -->
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 modal modal-details" id="tournoi-arca" tabindex="-1" z-index="9999" role="dialog" aria-hidden="true">
-                <div class="modal-content">
-                    <div class="fa fa-times fa-stack-2x close-modal" data-dismiss="modal">
-                    </div>
                     <div class="row">
-                        <div class="col-lg-10 col-lg-offset-1">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2>Tournoi d'Arcachon</h2>
-                                <p class="fa fa-calendar item-intro"> 02 janv - 26 mars</p>
-                                <div class="row">
-                                    <div class="col-lg-4">
-                                        <img class="img-responsive img-centered" src="img/news/2016/tournoi_arcachon_1.jpeg" alt="">
+                        <div class="col-sm-{{ colBootsrap }} col-md-{{ colBootsrap }} col-lg-{{ colBootsrap }}" style="padding-left:7px; padding-right:7px;" data-ng-repeat="newsCol in newsByColumn">
+                            <div class="post-box" data-ng-repeat="actu in newsCol">
+                                <div class="post-img" ng-show="actu.img">
+                                    <img ng-src="{{ actu.img }}" class="grid-img img-loaded" data-actual-width = "{{actu.actualWidth}}"  data-actual-height="{{actu.actualHeight}}">
+                                </div>
+                                <div class="post-img" ng-hide="actu.img" style="padding-bottom: 0px;">
+                                </div>
+                                <div class="post-info">
+                                    <div class="post-basic-info">
+                                        <p ng-show="actu.Tag" class="post-label">{{ actu.Tag }}</p>
+                                        <h5><a href="#" class="post-titre">{{ actu.Titre }}</a></h5>
+                                        <h6 ng-show="actu.SousTitre"><p class="post-titre">{{ actu.SousTitre }}</p></h6>
+                                        <div class="post-date" ng-show="actu.Date">
+                                            <i class="fa fa-clock-o" style="font-size:11px;"></i>
+                                            <span class="post-date-date">{{ actu.Date }}</span>
+                                        </div>
+                                        <p class="post-description" data-ng-repeat="texte in actu.Description" >{{ texte }}</p>
+                                        <p class="post-description" data-ng-repeat="url in actu.url" ><a href="{{ url.lien }}" target="_blank">{{ url.titre }}</a></p>
                                     </div>
-                                    <div class="col-lg-4">
-                                        <img class="img-responsive img-centered" src="img/news/2016/tournoi_arcachon_2.jpg" alt="">
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <img class="img-responsive img-centered" src="img/news/2016/tournoi_arcachon_3.jpg" alt="">
+                                    <div class="post-info-rate-share">
+                                        <div class="rateit">
+                                            <span> </span>
+                                        </div>
+                                        <!--div class="post-share">
+                                            <div class="fb-share-button" data-href="http://www.arcapelote.com/news.html" data-layout="button" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.arcapelote.com%2F&amp;src=sdkpreparse">Partager</a></div>
+                                        </div-->
+                                        <div class="clear"> 
+                                        </div>
                                     </div>
                                 </div>
-                                <p class="sous-titre">Description</p>
-                                <p>Le tournoi d'Arcachon se déroule sur les trois premiers mois de l'année au Pilotaris Arcachonnais.</p>
-                                <p>26 équipes engagées de 9 clubs différents, 56 parties de poule à jouer.</p>
-                                <p class="sous-titre">Programme</p>
-                                <p>Quarts de finale : 1er we de mars samedi et dimanche</p>
-                                <p>Demies-finales : le we suivant</p>
-                                <p>Finales : 26 mars</p>
-                                <p class="sous-titre">Résultats</p>
-                                <p>3ème série : Vainqueurs ELISSALDE - GONZALES (Villenave) 35 / 21 DUPUIS - MASSIERE (Biscarosse)</p>
-                                <p>2ème série : Vainqueurs MOSCA - BOUDASSOU (Bordeaux-Lac) 35 / 25 PEIGNON - PERNICENI (Gujan)</p>
-                                <p>1ère série : Vainqueurs FABRE - RIGAUDIE (Bordeaux-Lac/Bègles) 35 / 26 ROCCO - DENDARY (Le Haillan)</p>
-                                <br>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal" style="text-align: center;"><i class="fa fa-times"></i> Fermer</button>
                             </div>
                         </div>
                     </div>
@@ -556,181 +576,21 @@
             </div>
         </div>
 
-        <!-- Détails des championnats -->
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 modal modal-details" id="ChampPGPLCA" tabindex="-1" z-index="9999" role="dialog" aria-hidden="true">
-                <div class="modal-content">
-                    <div class="fa fa-times fa-stack-2x close-modal" data-dismiss="modal">
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-10 col-lg-offset-1">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2>Championnat de Ligue Côte d'Argent</h2><h2>Finales Paleta Gomme Pleine</h2>
-                                <p class="fa fa-calendar item-intro"> 14 mai</p>
-                                <!--div class="row">
-                                    <div class="col-lg-3">
-                                        <img class="img-responsive img-centered" src="img/news/2016/GC_championnat_LCA_1.jpeg" alt="">
-                                    </div>
-                                </div-->
-                                <p class="sous-titre">Description</p>
-                                <p>Les finales du championnat de Ligue de paleta pelote gomme pleine place libre 2016 se dérouleront le samedi 14 mai à Cestas au fronton municipal.</p>
-                                <p>Le SAGC pelote basque vous propose une grillade le midi (participation 5€) , date limite de réservation 12 mai par mail secretariatsagcpelote@orange.fr.</p>
-                                <p class="sous-titre">Programme</p>
-                                <p>10h00 : 1ère série femmes</p>
-                                <p>PILOTARI GUJANAIS 1 (LALANNE Catherine / GUIET Corinne) contre U.S. BAZAS 1 (JOURDAN Maguy / DAL-CIN Laudine)</p>
-                                <br>
-                                <p>11h00 : 3ème série hommes</p>
-                                <p>PILOTARI GUJANAIS 05 (PEIGNON Frédéric - PERNICENI Jean luc) contre C.A. BEGLAIS 03 (DEROCLE Fabrice - CASSAGNE Adrien)</p>
-                                <br>
-                                <p>15h00 : 2ème série hommes</p>
-                                <p>C.A. BEGLAIS 01 (RIGAUDIE Kevin - GUITTON Cyril) contre S.A. GAZINET CESTAS 02 (MARTIN Nicolas - PARIS Steven)</p>
-                                <br>
-                                <p>16h00 : 1ère série hommes</p>
-                                <p>A.S. LIBOURNAISE 01 (NICOLAS Christophe - GIBAULT Kévin) OU PILOTARI CLUB GRADIGNANAIS 03 (BONNIN Olivier - HARGUINDEGUY Michel ) / S.A. GAZINET CESTAS 01 (GOUDIN Nicolas - MICHALUC Christophe)</p>
-                                <br>
-                                <p>17h00 : Remise des coupes et vin d'honneur</p>
-                                <p class="sous-titre">Résultats</p>
-                                <br>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal" style="text-align: center;"><i class="fa fa-times"></i> Fermer</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 modal modal-details" id="ChampGCLCA" tabindex="-1" z-index="9999" role="dialog" aria-hidden="true">
-                <div class="modal-content">
-                    <div class="fa fa-times fa-stack-2x close-modal" data-dismiss="modal">
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-10 col-lg-offset-1">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2>Championnat de Ligue Côte d'Argent</h2><h2>Grand Chistera Senior</h2>
-                                <p class="fa fa-calendar item-intro"> 30 avril - 1er mai</p>
-                                <div class="row">
-                                    <div class="col-lg-3">
-                                        <img class="img-responsive img-centered" src="img/news/2016/GC_championnat_LCA_1.jpeg" alt="">
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <img class="img-responsive img-centered" src="img/news/2016/GC_championnat_LCA_2.jpeg" alt="">
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <img class="img-responsive img-centered" src="img/news/2016/GC_championnat_LCA_4.jpeg" alt="">
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <img class="img-responsive img-centered" src="img/news/2016/GC_championnat_LCA_3.jpeg" alt="">
-                                    </div>
-                                </div>
-                                <p class="sous-titre">Description</p>
-                                <p>Le Championnat de Ligue Côte d'Argent 2016 à Grand Chistera s'est déroulé les samedi 30 avril et dimanche 1er mai sur la cancha du Fronton Abbé Anabitarte d'Arcachon.</p>
-                                <p>Quatre équipes étaient engagées (2 du Pilotari Club Villenavais, 1 du Royan Océan Club et 1 du Pilotaris Arcachonnais). La première journée a été perturbée par une météo très incertaine. En effet, la première partie prévue à 10h30 n'a débuté qu'à 14h. L'apparition tardive du soleil a permis néanmoins de boucler le championnat dans le week-end. La compétition a été dominée par les deux équipes du Pilotaris Club Villenavais qui se sont qualifiées, à l'issue des parties de poules, pour la finale. L'équipe 1, sortie invaincue des parties qualificatives, pouvait envisager l'avenir avec sérénité, mais après de nombreuses égalisations et des points disputés, c'est finalement l'équipe 2 qui devient championne de Ligue sur le score de 30 à 23. A l'issue de la petite finale, le Pilotaris Arcachonnais qui avait choisi de double surclasser un joueur cadet se classe 3ème devant le Royan Océan Club qui a bien résisté aux assauts de ses adversaires puisque la partie s'est achevée sur le score de 30 à 23.</p>
-                                <p>Les équipes classées 1, 2 et 3 sont qualifiées pour la phase finale du tournoi préliminaire qui se déroulera à Bagnères-de-Luchon les samedi 04 et dimanche 05 juin 2016. L'équipe classée 4 est qualifiée pour la première phase du tournoi préliminaire qui aura lieu à Bagnères-de-Luchon le samedi 21 mai 2016.</p>
-                                <p>Un grand merci aux bénévoles du Pilotaris Arcachonnais qui ont organisé ce championnat et qui ont préparé deux repas conviviaux pour les joueurs et leurs accompagnateurs.</p>
-                                <div class="row">
-                                    <div class="lien_news col-lg-12">
-                                        <a href="img/news/2016/GC_championnat_LCA_CR.png" target="_blank">Télécharger le compte-rendu</a>
-                                    </div>
-                                </div>
-                                <p class="sous-titre">Programme</p>
-                                <p>Samedi 30 avril 2016</p>
-                                <p>10h30 : Equipe Pilotari Club Villenavais 1 contre Equipe Pilotari Club Villenavais 2</p>
-                                <p>11h30 : Equipe Pilotaris Arcachonnais contre Equipe Royan Océan Club</p>
-                                <p>15h00 : Equipe Pilotari Club Villenavais 1 contre Equipe Royan Océan Club</p>
-                                <p>16h00 : Equipe Pilotari Club Villenavais 2 contre Equipe Pilotaris Arcachonnais</p>
-                                <br>
-                                <p>Dimanche 1er mai 2016</p>
-                                <p>10h30 : Equipe Pilotari Club Villenavais 1 contre Pilotaris Arcachonnais</p>
-                                <p>11h30 : Equipe Pilotari Club Villenavais 2 contre Equipe Royan Océan Club</p>
-                                <br>
-                                <p>15h00 : Partie de classement 3/4</p>
-                                <p>16h00 : Finale</p>
-                                <p class="sous-titre">Résultats</p>
-                                <p>Champions de Ligue Côte d'Argent : Equipe Pilotari Club Villenavais 2 (Nicol Thomas - Dubasque Clément - Nicol Guillaume)</p>
-                                <p>Vices-champions de Ligue Côte d'Argent : Equipe Pilotari Club Villenavais 1 (Guignard Mathieu - Hernandez Lilian - Medina Julien)</p>
-                                <p>3èmes : Equipe Pilotaris Arcachonnais (Vatskil Julien - Legros Hugo - Cléaz Christophe)</p>
-                                <p>4èmes : Equipe Royan Océan Club (Piochaud Fabien - Ledannois Thomas - Rabilloud Arthur)</p>
-                                <br>
-                                <div class="row">
-                                    <div class="col-lg-10 col-lg-offset-1">
-                                        <img class="img-responsive img-centered" src="img/news/2016/GC_championnat_LCA.png" alt="" style="height: 500px; max-height: 500px;">
-                                    </div>
-                                </div>
-                                <br>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal" style="text-align: center;"><i class="fa fa-times"></i> Fermer</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Autres fenetres -->
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 modal modal-details" id="RassemblementFeminin" tabindex="-1" z-index="9999" role="dialog" aria-hidden="true">
-                <div class="modal-content">
-                    <div class="fa fa-times fa-stack-2x close-modal" data-dismiss="modal">
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-10 col-lg-offset-1">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2>Rassemblement féminin</h2>
-                                <p class="fa fa-calendar item-intro"> 5 juin</p>
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <img class="img-responsive img-centered" src="img/news/2016/RassemblementFemininLigueArca2.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-4 col-lg-offset-2">
-                                        <img class="img-responsive img-centered" src="img/news/2016/RassemblementFemininLigueArca.jpg" alt="">
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <img class="img-responsive img-centered" src="img/news/2016/RassemblementFemininLigueArca3.jpg" alt="">
-                                    </div>
-                                </div>
-                                <br>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal" style="text-align: center;"><i class="fa fa-times"></i> Fermer</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
+        <!-- Plugin JavaScript -->
+
+        <script src="js/news/newsController.js"></script>
+        <script src="js/news/newsDirective.js"></script>
+        <script src="js/news/services.js"></script>
+        <script src="js/news/newsFunctions.js"></script>
+        <script src="js/news/main.js"></script>
+
+
         <!-- jQuery -->
         <script src="js/jquery.js"></script>
 
         <!-- Bootstrap Core JavaScript -->
         <script src="js/bootstrap.min.js"></script>
 
-        <!-- Plugin JavaScript -->
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-        <script src="js/classie.js"></script>
-        <script src="js/cbpAnimatedHeader.js"></script>
-
-        <!-- Contact Form JavaScript -->
-        <script src="js/jqBootstrapValidation.js"></script>
-        <script src="js/contact_me.js"></script>
-
-        <!-- Custom Theme JavaScript -->
-        <script src="js/agency.js"></script>
-
-        <!-- Fixation menu top JavaScript -->
-        <script src="js/menu_top.min.js"></script>
-
-        <!-- Presentation -->
-        <script src="js/jquery.easytabs.min.js"></script>
-
-        <!-- Initialisation des tooltip bootstrap -->
-        <script>
-            $(function () {
-                $('[data-toggle="tooltip"]').tooltip()
-            })
-        </script>
 
     </body>
 
