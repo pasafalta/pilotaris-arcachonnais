@@ -174,12 +174,29 @@ fieldset[disabled] .btn-primary.active {
     font-size: 18px;
     padding: 20px 40px
 }
+.btn-md {
+    color: #fff;
+    background-color: #659857;
+    border-color: #659857;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 3px;
+    font-size: 14px;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
 .btn-lg {
     font-weight: 600;
     border-radius: 3px;
     font-size: 14px;
     padding: 15px 30px;
 }
+.btn-md:hover,
+.btn-md:focus,
+.btn-md:active,
+.btn-md.active,
+.open .dropdown-toggle.btn-md,
 .btn-xl:hover,
 .btn-xl:focus,
 .btn-xl:active,
@@ -194,6 +211,9 @@ fieldset[disabled] .btn-primary.active {
     background-color: #659857;
     border-color: #659857
 }
+.btn-md:active,
+.btn-md.active,
+.open .dropdown-toggle.btn-md,
 .btn-xl:active,
 .btn-xl.active,
 .open .dropdown-toggle.btn-xl,
